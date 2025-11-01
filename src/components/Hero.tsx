@@ -7,15 +7,20 @@ export function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-12 relative">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
       <div className="max-w-6xl mx-auto w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col items-center gap-8"
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col items-center gap-10"
         >
-          <div className="w-32 h-32 md:w-40 md:h-40 glass-card rounded-3xl p-6 flex items-center justify-center">
+          <motion.div 
+            className="w-28 h-28 md:w-36 md:h-36 glass-card rounded-2xl p-6 flex items-center justify-center"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <svg viewBox="0 0 200 200" className="w-full h-full" fill="currentColor">
               <path d="M40 40 L40 160 L70 160 L70 70 L130 70 C155 70 175 90 175 115 C175 140 155 160 130 160 L100 160" 
                     stroke="currentColor" 
@@ -32,23 +37,22 @@ export function Hero() {
                     strokeLinejoin="round"
                     className="text-accent" />
             </svg>
-          </div>
+          </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold tracking-tight text-foreground"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.3)' }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               DOBEU
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-2xl text-foreground/90 tracking-wide"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.7 }}
+              className="text-xl md:text-2xl text-muted-foreground tracking-wide"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               Tech Solutions
             </motion.p>
@@ -57,10 +61,10 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="glass-card rounded-2xl p-8 md:p-12 max-w-3xl"
+            transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="glass-card rounded-2xl p-8 md:p-10 max-w-3xl"
           >
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+            <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
               Empowering businesses through innovative design, robust cloud infrastructure, 
               and expert consulting services. Your partner in digital transformation.
             </p>
@@ -70,12 +74,12 @@ export function Hero() {
             onClick={scrollToPillars}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
-            className="glass-card glass-card-hover rounded-full p-4 mt-8 transition-all duration-300 cursor-pointer group"
-            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.6, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="glass-card glass-card-hover rounded-full p-3 md:p-4 mt-6 transition-all duration-200 cursor-pointer group"
+            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ArrowDown size={32} weight="bold" className="text-accent group-hover:text-accent animate-bounce" />
+            <ArrowDown size={28} weight="bold" className="text-accent" />
           </motion.button>
         </motion.div>
       </div>

@@ -63,24 +63,25 @@ A comprehensive corporate showcase website for Dobeu Tech Solutions that present
 
 ## Design Direction
 
-The design should evoke a sense of cutting-edge innovation, technical precision, and creative excellence through glassmorphism. It should feel premium and modern like Apple's design language, with a playful yet professional edge. The interface should be rich with subtle animations, layered depth, and colorful gradients that create visual interest without overwhelming the content.
+The design should evoke a sense of sophisticated professionalism, clarity, and warmth through refined glassmorphism on a warm cream background. Inspired by Claude's documentation site, it should feel approachable yet premium, with subtle animations and a calming color palette. The interface should be clean with generous spacing, allowing content to breathe while maintaining visual interest through layered glass effects.
 
 ## Color Selection
 
-Custom palette with vibrant gradients and brand color (blue from logo)
+Warm, earthy palette with orange accents inspired by Claude's documentation design
 
-- **Primary Color**: Deep Cyan Blue (oklch(0.55 0.15 220)) - Derived from the Dobeu logo, communicates trust, technology, and professionalism
+- **Primary Color**: Warm Brown (oklch(0.45 0.08 50)) - A sophisticated, grounded tone that communicates trust and stability
 - **Secondary Colors**: 
-  - Vibrant Purple (oklch(0.60 0.20 290)) - Represents creativity and design services
-  - Emerald Green (oklch(0.65 0.15 160)) - Symbolizes growth and cloud infrastructure
-  - Coral Orange (oklch(0.70 0.15 40)) - Adds warmth and energy to consulting services
-- **Accent Color**: Electric Cyan (oklch(0.75 0.18 210)) - For CTAs, hover states, and important interactive elements
+  - Soft Cream (oklch(0.92 0.02 70)) - Creates a warm, inviting foundation
+  - Vibrant Purple (oklch(0.60 0.15 290)) - Represents creativity and design services
+  - Muted Blue (oklch(0.55 0.12 200)) - Symbolizes technology and cloud infrastructure
+- **Accent Color**: Warm Orange (oklch(0.60 0.15 35)) - For CTAs, hover states, and important interactive elements, inspired by Claude's signature orange
 - **Foreground/Background Pairings**:
-  - Background (Gradient base): Multi-color gradient oklch(0.20 0.08 250) to oklch(0.30 0.10 280) - Dark base with subtle purple-blue shift
-  - Foreground on background: White (oklch(0.98 0 0)) - Ratio 14.2:1 ✓
-  - Glass Cards (Semi-transparent white): oklch(1 0 0 / 0.1) with backdrop-blur - White text (oklch(0.98 0 0)) on glass - Ratio varies with background but enhanced by blur
-  - Primary buttons (Deep Cyan): White text (oklch(0.98 0 0)) - Ratio 5.8:1 ✓
-  - Accent CTAs (Electric Cyan): Dark text (oklch(0.15 0 0)) - Ratio 9.2:1 ✓
+  - Background (Warm cream): oklch(0.97 0.015 70) - Soft, inviting base
+  - Foreground on background: Dark Brown (oklch(0.25 0.02 60)) - Ratio 12.8:1 ✓
+  - Glass Cards (Semi-transparent white): oklch(0.99 0.005 70 / 0.7) with backdrop-blur - Dark text on glass - Ratio 11.2:1 ✓
+  - Primary buttons (Warm Brown): White text (oklch(0.99 0 0)) - Ratio 9.1:1 ✓
+  - Accent CTAs (Warm Orange): White text (oklch(0.99 0 0)) - Ratio 4.8:1 ✓
+  - Muted elements: oklch(0.50 0.02 60) on background - Ratio 5.2:1 ✓
 
 ## Font Selection
 
@@ -96,10 +97,10 @@ The typography should convey modernity and precision while maintaining excellent
 
 ## Animations
 
-Animations should enhance the glassmorphic effect with smooth, physics-based transitions that create a sense of depth and fluidity - subtle enough to feel premium but present enough to create delight and guide attention.
+Animations should be smooth, natural, and purposeful with a focus on subtle, refined motion that enhances usability - drawing inspiration from Claude's documentation site where animations guide attention without being distracting.
 
-- **Purposeful Meaning**: Entrance animations simulate glass elements sliding into place and coming into focus, reinforcing the layered depth. Hover animations create subtle lift and glow effects that make elements feel responsive and interactive. Transitions between sections use smooth blur and fade effects.
-- **Hierarchy of Movement**: Hero section has the most dramatic entrance (fade + slide up), pillar cards have staggered entrances (200ms delay between each), detail modals slide in from their respective card positions, micro-interactions on buttons (scale + glow on hover), smooth scroll animations as sections enter viewport.
+- **Purposeful Meaning**: Entrance animations use gentle fade-ins with slight upward movement, creating a sense of content floating into place naturally. Hover animations are minimal - subtle lifts and color shifts that provide clear feedback without being flashy. Scroll-triggered animations use intersection observers with appropriate margins to begin before elements enter viewport. All transitions use custom cubic-bezier easing [0.22, 1, 0.36, 1] for smooth, natural motion.
+- **Hierarchy of Movement**: Hero section has a staggered entrance (logo → title → description → CTA) with 100-200ms delays between each. Pillar cards fade in sequentially with minimal 100ms delays. Modal overlays use quick 200-300ms transitions. Micro-interactions on buttons are instant (scale transforms under 200ms). Scroll is always smooth behavior. All animations respect prefers-reduced-motion for accessibility.
 
 ## Component Selection
 

@@ -9,49 +9,53 @@
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 :root {
-  --background: oklch(0.25 0.09 250);
-  --foreground: oklch(0.98 0 0);
+  --background: oklch(0.97 0.015 70);
+  --foreground: oklch(0.25 0.02 60);
 
-  --card: oklch(1 0 0 / 0.08);
-  --card-foreground: oklch(0.98 0 0);
+  --card: oklch(0.99 0.005 70 / 0.6);
+  --card-foreground: oklch(0.25 0.02 60);
   
-  --popover: oklch(1 0 0 / 0.12);
-  --popover-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.99 0.005 70);
+  --popover-foreground: oklch(0.25 0.02 60);
 
-  --primary: oklch(0.55 0.15 220);
-  --primary-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.45 0.08 50);
+  --primary-foreground: oklch(0.99 0 0);
 
-  --secondary: oklch(0.60 0.20 290);
-  --secondary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.02 70);
+  --secondary-foreground: oklch(0.25 0.02 60);
 
-  --muted: oklch(1 0 0 / 0.06);
-  --muted-foreground: oklch(0.80 0.02 240);
+  --muted: oklch(0.94 0.01 70);
+  --muted-foreground: oklch(0.50 0.02 60);
 
-  --accent: oklch(0.75 0.18 210);
-  --accent-foreground: oklch(0.15 0 0);
+  --accent: oklch(0.60 0.15 35);
+  --accent-foreground: oklch(0.99 0 0);
 
-  --destructive: oklch(0.60 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(1 0 0 / 0.18);
-  --input: oklch(1 0 0 / 0.15);
-  --ring: oklch(0.75 0.18 210);
+  --border: oklch(0.88 0.02 70);
+  --input: oklch(0.92 0.02 70);
+  --ring: oklch(0.60 0.15 35);
 
-  --gradient-start: oklch(0.20 0.08 250);
-  --gradient-end: oklch(0.30 0.10 280);
+  --gradient-start: oklch(0.97 0.015 70);
+  --gradient-end: oklch(0.95 0.020 50);
   
-  --glass-bg: oklch(1 0 0 / 0.1);
-  --glass-border: oklch(1 0 0 / 0.2);
-  --glass-hover: oklch(1 0 0 / 0.15);
+  --glass-bg: oklch(0.99 0.005 70 / 0.7);
+  --glass-border: oklch(0.45 0.08 50 / 0.15);
+  --glass-hover: oklch(0.99 0.005 70 / 0.85);
 
-  --pillar-designs: oklch(0.60 0.20 290);
-  --pillar-cloud: oklch(0.65 0.15 160);
-  --pillar-consulting: oklch(0.70 0.15 40);
+  --pillar-designs: oklch(0.60 0.15 290);
+  --pillar-cloud: oklch(0.55 0.12 200);
+  --pillar-consulting: oklch(0.60 0.15 35);
 
-  --radius: 1rem;
+  --radius: 0.75rem;
 }
 
 @theme {
@@ -85,21 +89,21 @@
 
 .glass-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
 }
 
 .glass-card-hover:hover {
   background: var(--glass-hover);
-  border-color: oklch(1 0 0 / 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 }
 
 .gradient-mesh {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   position: relative;
 }
 
@@ -108,21 +112,39 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 30%, oklch(0.45 0.15 280) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, oklch(0.40 0.12 220) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, oklch(0.35 0.10 200) 0%, transparent 60%);
-  opacity: 0.6;
-  animation: meshFloat 20s ease-in-out infinite;
+    radial-gradient(circle at 80% 20%, oklch(0.95 0.05 35 / 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, oklch(0.95 0.04 290 / 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, oklch(0.96 0.03 200 / 0.15) 0%, transparent 60%);
+  opacity: 1;
+  animation: meshFloat 25s ease-in-out infinite;
 }
 
 @keyframes meshFloat {
   0%, 100% { 
     transform: translate(0, 0) scale(1); 
+    opacity: 1;
   }
   33% { 
-    transform: translate(30px, -30px) scale(1.1); 
+    transform: translate(20px, -20px) scale(1.05); 
+    opacity: 0.9;
   }
   66% { 
-    transform: translate(-20px, 20px) scale(0.95); 
+    transform: translate(-15px, 15px) scale(0.98); 
+    opacity: 0.95;
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }

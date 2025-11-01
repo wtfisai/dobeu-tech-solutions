@@ -29,19 +29,16 @@ export function FloatingContact() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
           onClick={scrollToContact}
-          className="fixed bottom-8 right-8 glass-card rounded-full p-4 hover:scale-110 transition-all duration-300 z-40 group shadow-2xl"
-          style={{ 
-            boxShadow: '0 8px 32px rgba(117, 190, 218, 0.3)'
-          }}
-          whileHover={{ scale: 1.1 }}
+          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 glass-card rounded-full p-3 md:p-4 transition-all duration-200 z-40 group shadow-lg hover:shadow-xl"
+          whileHover={{ y: -2 }}
           whileTap={{ scale: 0.95 }}
         >
           <ChatCircleDots 
-            size={32} 
+            size={28} 
             weight="duotone" 
-            className="text-accent group-hover:text-accent transition-colors"
+            className="text-accent transition-colors"
           />
         </motion.button>
       )}

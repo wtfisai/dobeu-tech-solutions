@@ -39,22 +39,22 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 px-4">
+    <section id="contact" className="py-20 md:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-10 md:mb-12"
         >
-          <div className="glass-card rounded-2xl p-4 w-fit mx-auto mb-6">
-            <EnvelopeSimple size={48} weight="duotone" className="text-accent" />
+          <div className="glass-card rounded-xl p-3 w-fit mx-auto mb-6">
+            <EnvelopeSimple size={40} weight="duotone" className="text-accent" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-foreground/70">
+          <p className="text-base md:text-lg text-muted-foreground">
             Ready to transform your business? Let's talk about your project.
           </p>
         </motion.div>
@@ -62,14 +62,14 @@ export function ContactSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-card rounded-3xl p-8 md:p-12"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="glass-card rounded-2xl p-6 md:p-10"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-semibold text-foreground/90">
+                <label htmlFor="name" className="text-sm font-semibold text-foreground">
                   Name
                 </label>
                 <Input
@@ -78,13 +78,13 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="glass-card border-white/30 text-foreground placeholder:text-foreground/40 focus:border-accent"
+                  className="glass-card border-border text-foreground placeholder:text-muted-foreground focus:border-accent bg-background/50"
                   placeholder="John Doe"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-semibold text-foreground/90">
+                <label htmlFor="email" className="text-sm font-semibold text-foreground">
                   Email
                 </label>
                 <Input
@@ -94,14 +94,14 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="glass-card border-white/30 text-foreground placeholder:text-foreground/40 focus:border-accent"
+                  className="glass-card border-border text-foreground placeholder:text-muted-foreground focus:border-accent bg-background/50"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="service" className="text-sm font-semibold text-foreground/90">
+              <label htmlFor="service" className="text-sm font-semibold text-foreground">
                 Service Interested In
               </label>
               <Input
@@ -109,13 +109,13 @@ export function ContactSection() {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="glass-card border-white/30 text-foreground placeholder:text-foreground/40 focus:border-accent"
+                className="glass-card border-border text-foreground placeholder:text-muted-foreground focus:border-accent bg-background/50"
                 placeholder="e.g., Web Design, Cloud Hosting, Consulting"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-semibold text-foreground/90">
+              <label htmlFor="message" className="text-sm font-semibold text-foreground">
                 Message
               </label>
               <Textarea
@@ -125,7 +125,7 @@ export function ContactSection() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="glass-card border-white/30 text-foreground placeholder:text-foreground/40 focus:border-accent resize-none"
+                className="glass-card border-border text-foreground placeholder:text-muted-foreground focus:border-accent resize-none bg-background/50"
                 placeholder="Tell us about your project..."
               />
             </div>
@@ -134,14 +134,14 @@ export function ContactSection() {
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="w-full md:w-auto text-lg font-semibold bg-accent hover:bg-accent/90 text-accent-foreground gap-2"
+              className="w-full md:w-auto text-base font-semibold bg-accent hover:bg-accent/90 text-accent-foreground gap-2 transition-all duration-200"
             >
               {isSubmitting ? (
                 'Sending...'
               ) : (
                 <>
                   Send Message
-                  <PaperPlaneRight size={20} weight="bold" />
+                  <PaperPlaneRight size={18} weight="bold" />
                 </>
               )}
             </Button>
@@ -151,11 +151,11 @@ export function ContactSection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-12 text-center"
         >
-          <p className="text-foreground/60 text-sm">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Dobeu Tech Solutions. All rights reserved.
           </p>
         </motion.div>
