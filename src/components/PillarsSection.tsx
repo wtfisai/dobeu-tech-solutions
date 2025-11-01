@@ -20,7 +20,7 @@ export interface Pillar {
 const pillars: Pillar[] = [
   {
     id: 'designs',
-    title: 'Dobeu Designs',
+    title: 'Designs',
     subtitle: 'Creative Excellence',
     description: 'Transform your brand with stunning graphics, modern web design, and comprehensive digital creative services.',
     icon: <Palette size={48} weight="duotone" />,
@@ -50,7 +50,7 @@ const pillars: Pillar[] = [
   },
   {
     id: 'cloud',
-    title: 'Dobeu Cloud',
+    title: 'Cloud / Infrastructure',
     subtitle: 'Infrastructure & Development',
     description: 'Developer-focused cloud solutions including hosting, storage, consulting, and complete software setup services.',
     icon: <CloudArrowUp size={48} weight="duotone" />,
@@ -80,7 +80,7 @@ const pillars: Pillar[] = [
   },
   {
     id: 'consulting',
-    title: 'Tech Consulting',
+    title: 'Consulting',
     subtitle: 'Strategic Guidance',
     description: 'Expert technology consulting to help you make informed decisions and optimize your technical operations.',
     icon: <ChartLineUp size={48} weight="duotone" />,

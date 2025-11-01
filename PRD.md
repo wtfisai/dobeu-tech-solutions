@@ -1,6 +1,6 @@
 # Planning Guide
 
-A comprehensive corporate showcase website for Dobeu Tech Solutions that presents their three product pillars (Dobeu Designs, Dobeu Cloud, and Consulting Services) through an elegant glassmorphic interface that embodies innovation and technical excellence.
+A comprehensive corporate showcase website for Dobeu Tech Solutions that presents their three service pillars (Designs, Cloud / Infrastructure, and Consulting) through an elegant glassmorphic interface that embodies innovation and technical excellence. The site features a landing page with call-to-action directing users to a pricing section with three engagement models.
 
 **Experience Qualities**: 
 1. **Premium** - The glassmorphic design with frosted effects creates a sense of sophistication and cutting-edge technology
@@ -12,35 +12,49 @@ A comprehensive corporate showcase website for Dobeu Tech Solutions that present
 
 ## Essential Features
 
-### Hero Section with Company Overview
-- **Functionality**: Full-viewport landing section displaying company logo, tagline, and animated glassmorphic cards
-- **Purpose**: Create immediate visual impact and communicate brand identity
+### Landing Hero Section
+- **Functionality**: Full-viewport landing section displaying company logo, tagline, and animated glassmorphic card with CTA to scroll to pricing
+- **Purpose**: Create immediate visual impact and communicate brand identity, directing users to pricing options
 - **Trigger**: Page load
-- **Progression**: Page loads → Animated gradient background appears → Logo fades in → Glassmorphic hero card slides up → CTA buttons become interactive
-- **Success criteria**: Users immediately understand the company's focus and are drawn to explore the three pillars
+- **Progression**: Page loads → Animated gradient background appears → Logo fades in → Glassmorphic hero card slides up → CTA arrow button appears → User clicks to scroll to pricing
+- **Success criteria**: Users immediately understand the company's focus and are guided to explore pricing options
+
+### Pricing Section with Service Models
+- **Functionality**: Three distinct glassmorphic cards presenting engagement models: "Per Project", "Complex Brand / Project Launch - Partner in your ops", and "Let's Discuss - Retainer"
+- **Purpose**: Clearly present service pricing structures and engagement options before deeper content exploration
+- **Trigger**: Scroll from landing hero or direct navigation
+- **Progression**: User scrolls/arrives → Cards animate into view with staggered timing → User reviews options → Click CTA buttons to scroll to contact form
+- **Success criteria**: Users understand the three engagement models and can easily select their preferred option to proceed to contact
+
+### Company Overview Section
+- **Functionality**: Secondary hero section providing company overview and description
+- **Purpose**: Reinforce brand identity and provide additional context after pricing introduction
+- **Trigger**: Scroll past pricing section
+- **Progression**: User scrolls → Animated elements appear → Overview content fades in → User can scroll to pillars section
+- **Success criteria**: Users gain deeper understanding of company mission and services
 
 ### Three Pillars Showcase
-- **Functionality**: Three distinct glassmorphic cards representing Dobeu Designs, Dobeu Cloud, and Consulting Services
-- **Purpose**: Clearly segment and present the company's service offerings
+- **Functionality**: Three distinct glassmorphic cards representing Designs, Cloud / Infrastructure, and Consulting
+- **Purpose**: Clearly segment and present the company's service offerings with simplified naming (removed "Dobeu" prefix)
 - **Trigger**: Scroll into view or click navigation
 - **Progression**: User scrolls/clicks → Cards animate into view → Hover reveals more details → Click expands full information in modal/panel → User can navigate between pillars
 - **Success criteria**: Each service area is clearly differentiated with appropriate iconography and description, users can easily understand what each pillar offers
 
-### Dobeu Designs Detail View
+### Designs Detail View
 - **Functionality**: Expandable section showing graphics, web design, and digital creative services
 - **Purpose**: Showcase creative capabilities and design portfolio approach
 - **Trigger**: Click on Designs pillar card
 - **Progression**: Click → Modal/panel slides in with backdrop blur → Service list with icons appears → Portfolio examples showcase → Contact CTA visible
 - **Success criteria**: Users understand the creative services offered and see visual examples of design work
 
-### Dobeu Cloud Detail View
+### Cloud / Infrastructure Detail View
 - **Functionality**: Expandable section detailing developer tools, consulting, hosting, and storage solutions
 - **Purpose**: Communicate technical expertise and infrastructure capabilities
-- **Trigger**: Click on Cloud pillar card
+- **Trigger**: Click on Cloud / Infrastructure pillar card
 - **Progression**: Click → Technical-themed panel appears → Service features list with icons → Technology stack badges → Integration examples → Contact CTA
 - **Success criteria**: Developer audience immediately recognizes relevant services and technical credibility
 
-### Consulting Services Detail View
+### Consulting Detail View
 - **Functionality**: Expandable section presenting consultation services under Tech Solutions brand
 - **Purpose**: Establish advisory and strategic planning capabilities
 - **Trigger**: Click on Consulting pillar card
@@ -127,10 +141,12 @@ Animations should be smooth, natural, and purposeful with a focus on subtle, ref
 
 - **Icon Selection**: 
   - Phosphor Icons throughout for consistency
-  - Palette (palette icon) for Dobeu Designs
-  - CloudArrowUp (cloud-arrow-up) for Dobeu Cloud  
+  - Palette (palette icon) for Designs
+  - CloudArrowUp (cloud-arrow-up) for Cloud / Infrastructure  
   - ChartLineUp (chart-line-up) for Consulting
   - ArrowRight (arrow-right) for CTAs and navigation
+  - ArrowDown (arrow-down) for scroll indicators
+  - Check (check) for feature lists in pricing cards
   - Envelope (envelope-simple) for contact
   - Plus/X (plus, x) for expand/collapse actions
 
